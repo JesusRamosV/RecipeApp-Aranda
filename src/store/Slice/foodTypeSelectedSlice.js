@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = "veryPopular";
+const initialState = "dessert";
 
 export const foodTypeSelectedSlice = createSlice({
   name: "foodTypeSelected",

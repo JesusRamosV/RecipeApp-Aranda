@@ -1,4 +1,4 @@
-import { QueryClient, useQuery, useQueryClient } from 'react-query';
+
 import Patrocinio from '../../assets/Grupo 7610.png'
 
 export function Footer() {

@@ -10,42 +10,50 @@ import { DisplayMenuFinal } from "./DisplayMenuFinal";
 import { useSelector } from "react-redux";
 import { useQuery } from "react-query";
 import { getRecipes } from "../../services/getRecipes";
+import { useEffect, useState } from "react";
 
 const tarjets = [
   {
     idnormal: "tarhead1",
     imgMenu: ic_vegetarian,
     food: "Vegetarianos",
+    name: "Vegetarianos", queryParams: "vegetarian"
   },
   {
     idnormal: "tarhead2",
     imgMenu: ic_main,
     food: "Principales",
+    name: "Platos Principales", queryParams: "fingerfood"
   },
   {
     idnormal: "tarhead3",
     imgMenu: ic_cake,
     food: "Tortas",
+    name: "Tortas", queryParams: "cakes"
   },
   {
     idnormal: "tarhead4",
     imgMenu: ic_fast_food,
     food: "Rápida",
+    name: "Comida Rápida", queryParams: "quick"
   },
   {
     idnormal: "tarhead5",
     imgMenu: ic_kids,
     food: "Menú Niños",
+    name: "Menú Niños", queryParams: ""
   },
   {
     idnormal: "tarhead6",
     imgMenu: ic_soup,
     food: "Sopas",
+    name: "Sopa", queryParams: "soups"
   },
 ];
 
 export function Recipes() {
 
+  const [state, setState] = useState(0)  
   const foodTypeSelected = useSelector((state: any) => state.foodTypeSelected);
   const {
     data: recipes,
@@ -55,7 +63,7 @@ export function Recipes() {
     refetchOnWindowFocus: false,
   });
 
-  console.log(recipes);
+ 
 
   if (isLoading || isFetching) {
     return (
@@ -75,8 +83,9 @@ export function Recipes() {
         <div className="middleTitle">Nuevas Recetas</div>
         <div className="contCarrusel">
           <ul id="carruselini" className="carrusel">
-            {recipes.map((recipe:any, i:any) => (
-              <CarouselInitial key={i} {...recipe} />
+            {recipes.map((recipe:any, index:any) => (
+              
+              <CarouselInitial key={index} {...recipe} />
             ))}
           </ul>
           <ul id="carruselfin" className="carrusel">

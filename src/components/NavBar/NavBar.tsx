@@ -1,19 +1,15 @@
 import { useDispatch, useSelector } from "react-redux";
 import { foodTypeSelectedReducer } from "../../store/Slice/foodTypeSelectedSlice";
-import { ItemsNavbar, TypeNavbar } from "./navBar.enum";
+import { ItemsNavbar } from "./navBar.enum";
 
-let  Items: ItemsNavbar[] = [
-  { name: "Home", queryParams: "veryPopular" },
+export let  Items: ItemsNavbar[] = [
+  { name: "Home", queryParams: "dessert" },
   { name: "Vegetarianos", queryParams: "vegetarian" },
   { name: "Platos Principales", queryParams: "fingerfood" },
   { name: "Tortas", queryParams: "cakes" },
   { name: "Comida Rápida", queryParams: "quick"},
-  { name: "Menú Niños",
-    queryParams: "",
-  },
-  {
-    name: "Sopa",
-    queryParams: "soups",
+  { name: "Menú Niños", queryParams: ""},
+  { name: "Sopa", queryParams: "soups",
   },
 ];
 export const NavBar = () => {
@@ -21,6 +17,7 @@ export const NavBar = () => {
 
   const foodTypeSelected = useSelector((state: any) => state.foodTypeSelected);
   const handleNewRecipes = (type: string | undefined ) => dispatch(foodTypeSelectedReducer(type));
+
 
   return (
     <>

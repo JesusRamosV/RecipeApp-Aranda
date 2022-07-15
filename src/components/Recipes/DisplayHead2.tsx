@@ -1,18 +1,22 @@
 import { FC } from "react";
 import { DisplayHead2Props } from "./types";
-
-import image from '../../assets/icons/ic_cake.svg'
+import { useDispatch} from "react-redux";
+import { foodTypeSelectedReducer } from "../../store/Slice/foodTypeSelectedSlice";
 
 export const DisplayHead2: FC<DisplayHead2Props> = ({
-    imgMenu,
-    food
+  imgMenu,
+  food,
+  queryParams,
 }) => {
-    
-    return (
-        <div className="tarjetMenu">
-            <img alt="Image-Menu" className="imgMenu" src={imgMenu} />
-            <span className="foodMenu">{food}</span>
-        </div>
-    )
-    
-    };
+  const dispatch = useDispatch();
+
+  const handleNewRecipes = (type: string | undefined) =>
+    dispatch(foodTypeSelectedReducer(type));
+  
+  return (
+    <div onClick={() => handleNewRecipes(queryParams)} className="tarjetMenu">
+      <img alt="Menu" className="imgMenu" src={imgMenu} />
+      <span className="foodMenu">{food}</span>
+    </div>
+  );
+};
