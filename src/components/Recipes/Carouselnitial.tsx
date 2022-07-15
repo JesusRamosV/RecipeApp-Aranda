@@ -6,18 +6,9 @@ import IcTime from "../../assets/icons/ic_time.svg";
 import IcChef from "../../assets/icons/ic_chef.svg";
 import IcStar from "../../assets/icons/ic_star.svg";
 import { useSelector } from "react-redux";
+import { calificationRandom, difficultyRandom } from "./helpers";
 
-const difficultyRandom = () => {
-  const difficultyArray = ["Fácil", "Dificil"];
-  let position = Math.floor(Math.random() * 2);
-  return difficultyArray[position];
-};
 
-const calificationRandom = (min: number, max: number) => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min);
-};
 
 
 export const CarouselInitial: FC<CarouselInitialProps> = ({
@@ -52,7 +43,7 @@ export const CarouselInitial: FC<CarouselInitialProps> = ({
         </div>
         <div className="score">
           <img alt="ic_star" className="star" src={IcStar} />
-          <span>{calificationRandom(1, 5)}</span>
+          <span>{calificationRandom(1.0, 5.0)}</span>
           <img alt="ic-favorite" className="heart" src={IcFavoriteSVG} />
         </div>
       </div>

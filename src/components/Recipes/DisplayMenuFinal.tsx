@@ -3,6 +3,7 @@ import { CarouselInitialProps } from "./types"
 import IcFavoriteSVG from "../../assets/icons/ic-favorite.svg";
 import IcStar from "../../assets/icons/ic_star.svg";
 import { useSelector } from "react-redux";
+import { calificationRandom } from "./helpers";
 
 
 export const DisplayMenuFinal: FC<CarouselInitialProps> =({
@@ -23,7 +24,7 @@ export const DisplayMenuFinal: FC<CarouselInitialProps> =({
             </div>
             <div className="score">
                 <img alt="start" className="star" src={IcStar} />
-                    <span>5</span>
+                    <span>{calificationRandom(1,5)}</span>
                     <img alt="heart" className="heart" src={IcFavoriteSVG} />
                     </div>
             </div>

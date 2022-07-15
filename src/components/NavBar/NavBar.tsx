@@ -41,7 +41,7 @@ export const NavBar = () => {
               ))}
             </ul>
           </div>
-          <div className="icoHome"></div>
+          <div onClick={() => handleNewRecipes('dessert')}  className="icoHome"></div>
         </div>
 
         <div className="imgHead">

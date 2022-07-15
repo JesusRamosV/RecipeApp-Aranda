@@ -60,7 +60,7 @@ export function Recipes() {
     refetchOnWindowFocus: false,
   });
 
- 
+
 
   if (isLoading || isFetching) {
     return (
