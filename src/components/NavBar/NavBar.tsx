@@ -1,21 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
 import { foodTypeSelectedReducer } from "../../store/Slice/foodTypeSelectedSlice";
+import { ItemsNavbar, TypeNavbar } from "./navBar.enum";
 
-
-const Items = [
+let  Items: ItemsNavbar[] = [
   { name: "Home", queryParams: "veryPopular" },
   { name: "Vegetarianos", queryParams: "vegetarian" },
   { name: "Platos Principales", queryParams: "fingerfood" },
-  {
-    name: "Tortas",
-    queryParams: "cakes",
-  },
-  {
-    name: "Comida Rápida",
-    queryParams: "quick",
-  },
-  {
-    name: "Menú Niños",
+  { name: "Tortas", queryParams: "cakes" },
+  { name: "Comida Rápida", queryParams: "quick"},
+  { name: "Menú Niños",
     queryParams: "",
   },
   {
@@ -23,11 +16,11 @@ const Items = [
     queryParams: "soups",
   },
 ];
-export const NavBar=() => {
+export const NavBar = () => {
   const dispatch = useDispatch();
 
-  const foodTypeSelected =useSelector(state => state.foodTypeSelected);
-  const handleNewRecipes = (type) => dispatch(foodTypeSelectedReducer(type));
+  const foodTypeSelected = useSelector((state: any) => state.foodTypeSelected);
+  const handleNewRecipes = (type: string | undefined ) => dispatch(foodTypeSelectedReducer(type));
 
   return (
     <>
@@ -40,16 +33,15 @@ export const NavBar=() => {
           </div>
           <div className="menuHead">
             <ul>
-              {Items.map(({ name, queryParams, index }) => (
+              {Items.map(({ name, queryParams }, index) => (
                 <li
                   key={index}
                   onClick={() => handleNewRecipes(queryParams)}
-                  className={foodTypeSelected === queryParams? "selected" : ""}
+                  className={foodTypeSelected === queryParams ? "selected" : ""}
                 >
                   {name}
                 </li>
               ))}
-             
             </ul>
           </div>
           <div className="icoHome"></div>
@@ -64,4 +56,4 @@ export const NavBar=() => {
       </div>
     </>
   );
-}
+};
