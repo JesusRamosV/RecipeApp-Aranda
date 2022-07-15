@@ -1,7 +1,5 @@
 import axios from "axios";
-import { useQuery } from "react-query";
-import { getRecipes } from "../../services/getRecipes";
-import { newRecipesReducer } from "./newRecipesSlice";
+import { newRecipesReducer } from "./foodTypeSelectedSlice";
 
 const calificationRandom = (min,max) => {
     min = Math.ceil(min);

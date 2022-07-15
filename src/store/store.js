@@ -1,12 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { newRecipesSlice } from "./Slice/newRecipesSlice";
-
-
+import { foodTypeSelectedReducer} from "./Slice/foodTypeSelectedSlice";
 
 
 export const store = configureStore({
     reducer: {
-        newRecipes: newRecipesSlice.reducer
+        newRecipes: foodTypeSelectedReducer.reducer
     }
     
     });
