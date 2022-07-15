@@ -4,7 +4,7 @@ import { Recipes, Footer } from "./components";
 import { NavBar } from "./components/NavBar/NavBar";
 import { store } from "./store/store";
 
-function App() {
+export const App = () => {
   return (
     <Provider store={store}>
       <NavBar />
@@ -14,4 +14,3 @@ function App() {
   );
 }
 
-export default App;

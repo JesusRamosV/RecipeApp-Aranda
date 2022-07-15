@@ -3,7 +3,7 @@ import { CarouselInitialProps } from "./types"
 import IcFavoriteSVG from "../../assets/icons/ic-favorite.svg";
 import IcStar from "../../assets/icons/ic_star.svg";
 import { useSelector } from "react-redux";
-import { calificationRandom } from "./helpers";
+import { calificationRandom } from "../../helpers";
 
 
 export const DisplayMenuFinal: FC<CarouselInitialProps> =({

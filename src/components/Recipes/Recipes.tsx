@@ -1,12 +1,10 @@
-import { CarouselInitial } from "./Carouselnitial";
-import { DisplayHead2 } from "./DisplayHead2";
+import { DisplayHead2, CarouselInitial, DisplayMenuFinal } from "./";
 import ic_vegetarian from "../../assets/icons/ic_vegetarian.svg";
 import ic_main from "../../assets/icons/ic_main.svg";
 import ic_cake from "../../assets/icons/ic_cake.svg";
 import ic_fast_food from "../../assets/icons/ic_fast-food.svg";
 import ic_kids from "../../assets/icons/ic_cake.svg";
 import ic_soup from "../../assets/icons/ic_soup.svg";
-import { DisplayMenuFinal } from "./DisplayMenuFinal";
 import { useSelector } from "react-redux";
 import { useQuery } from "react-query";
 import { getRecipes } from "../../services/getRecipes";

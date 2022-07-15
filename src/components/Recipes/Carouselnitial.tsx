@@ -6,7 +6,7 @@ import IcTime from "../../assets/icons/ic_time.svg";
 import IcChef from "../../assets/icons/ic_chef.svg";
 import IcStar from "../../assets/icons/ic_star.svg";
 import { useSelector } from "react-redux";
-import { calificationRandom, difficultyRandom } from "./helpers";
+import { calificationRandom, difficultyRandom } from "../../helpers";
 
 
 
