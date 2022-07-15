@@ -1,5 +1,4 @@
-import axios from "axios";
-import { useEffect } from "react";
+
 import { CarouselInitial } from "./Carouselnitial";
 import { DisplayHead2 } from "./DisplayHead2";
 import ic_vegetarian from '../../assets/icons/ic_vegetarian.svg'
@@ -9,46 +8,11 @@ import ic_fast_food from '../../assets/icons/ic_fast-food.svg'
 import ic_kids from '../../assets/icons/ic_cake.svg'
 import ic_soup from '../../assets/icons/ic_soup.svg'
 import { DisplayMenuFinal } from "./DisplayMenuFinal";
-import { useQuery, useQueryClient } from "react-query";
-import { getRecipes, getRecipesCakes } from "../../services/getRecipes";
 import { useSelector } from "react-redux";
 // import {} from "../../assets/icons/"
 
 
-const tarjets = [
-  {
-    idnormal: "normal1",
-    idhover: "hover1",
-    imgPlate: "https://spoonacular.com/recipeImages/716429-556x370.jpg",
-    food: "Ojingeo",
-    foodDesc: "Muchim",
-    calification: "5.0",
-  },
-  {
-    idnormal: "normal2",
-    idhover: "hover2",
-    imgPlate: "./assets/Ojingeo-muchim.png",
-    food: "Cola",
-    foodDesc: "Chicken",
-    calification: "5.0",
-  },
-  {
-    idnormal: "normal3",
-    idhover: "hover3",
-    imgPlate: "./assets/Ojingeo-muchim-1.png",
-    food: "Roasted",
-    foodDesc: "Carrot",
-    calification: "4.5",
-  },
-  {
-    idnormal: "normal4",
-    idhover: "hover4",
-    imgPlate: "./assets/cherry.png",
-    food: "Sweet",
-    foodDesc: "Cherries",
-    calification: "4.0",
-  },
-];
+
 
 const tarjets2 = [
   {
@@ -99,10 +63,7 @@ export function Recipes() {
   
   const recipes = useSelector( (state) => state.newRecipes)
 
-  
-  const queryClient = useQueryClient()
-
-  console.log(queryClient);
+ 
   
   return (
     <>
@@ -117,13 +78,13 @@ export function Recipes() {
         <div className="middleTitle">Nuevas Recetas</div>
         <div className="contCarrusel">
           <ul id="carruselini" className="carrusel">
-            {recipes.map((recipe, i) => (
+            {recipes?.map((recipe, i) => (
               <CarouselInitial key={i} {...recipe} />
             ))}
           </ul>
           <ul id="carruselfin" className="carrusel">
             {
-              recipes.map((recipe, i) => (
+              recipes?.map((recipe, i) => (
                 <DisplayMenuFinal key={i} {...recipe} />
               ))
             }

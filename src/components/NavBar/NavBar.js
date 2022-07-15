@@ -1,32 +1,33 @@
-import { useEffect } from "react";
-import { useQuery } from "react-query";
 import { useDispatch, useSelector } from "react-redux";
-import { getNewRecipesReacQuery, getNewRecipesRedux } from "../../store/Slice/thunks";
+import { foodTypeSelectedReducer } from "../../store/Slice/foodTypeSelectedSlice";
 
 
-
-
-export function NavBar() {
-
+const Items = [
+  { name: "Home", queryParams: "veryPopular" },
+  { name: "Vegetarianos", queryParams: "vegetarian" },
+  { name: "Platos Principales", queryParams: "fingerfood" },
+  {
+    name: "Tortas",
+    queryParams: "cakes",
+  },
+  {
+    name: "Comida Rápida",
+    queryParams: "quick",
+  },
+  {
+    name: "Menú Niños",
+    queryParams: "",
+  },
+  {
+    name: "Sopa",
+    queryParams: "soups",
+  },
+];
+export const NavBar=() => {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    handleNewRecipes('dessert');
-  }, [])
-  
-  const handleNewRecipes = (type) => {
-  
-   dispatch(getNewRecipesRedux(type));
-  }
-
-
-  const {data: mainCourse} = useQuery('[MainCourse]', getNewRecipesReacQuery('maincourse'));
-
-  console.log(mainCourse);
-
-
-
-
+  const foodTypeSelected =useSelector(state => state.foodTypeSelected);
+  const handleNewRecipes = (type) => dispatch(foodTypeSelectedReducer(type));
 
   return (
     <>
@@ -39,13 +40,16 @@ export function NavBar() {
           </div>
           <div className="menuHead">
             <ul>
-              <li onClick={() => handleNewRecipes('veryPopular')} className="selected">Home</li>
-              <li onClick={() => handleNewRecipes('vegetarian')}>Vegetarianos</li>
-              <li>Platos Principales</li>
-              <li onClick={() => handleNewRecipes('cakes')}>Tortas</li>
-              <li>Comida R&aacute;pida</li>
-              <li>Men&uacute; Ni&ntilde;os</li>
-              <li onClick={() => handleNewRecipes('soups')}>Sopas</li>
+              {Items.map(({ name, queryParams, index }) => (
+                <li
+                  key={index}
+                  onClick={() => handleNewRecipes(queryParams)}
+                  className={foodTypeSelected === queryParams? "selected" : ""}
+                >
+                  {name}
+                </li>
+              ))}
+             
             </ul>
           </div>
           <div className="icoHome"></div>
