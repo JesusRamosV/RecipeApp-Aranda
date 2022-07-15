@@ -12,7 +12,7 @@ export const CarouselInitial: FC<CarouselInitialProps> = ({
   idnormal,
   idhover,
   readyInMinutes,
-  serving,
+  servings,
   title,
   urlimage,
   type
@@ -52,7 +52,7 @@ export const CarouselInitial: FC<CarouselInitialProps> = ({
             <span className="titTextHover">
               Tama&ntilde;o de la porci&oacute;n
             </span>
-            <span className="textHover">{serving} raciones</span>
+            <span className="textHover">{servings} raciones</span>
           </div>
           <div className="descriptionHover">
             <img alt="ic_time" className="imgHover" src={IcTime} />

@@ -7,7 +7,7 @@ export const getRecipes = async (type: string) => {
   const { data } = await client.get(url, {
     params: {
       number: 4,
-      type: type,
+      tags: type,
     },
   });
   const { recipes } = data;

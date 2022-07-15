@@ -5,7 +5,7 @@ export type CarouselInitialProps = {
   idnormal: string;
   idhover: string;
   readyInMinutes: number;
-  serving: number;
+  servings: number;
   title: string;
   urlimage: string;
 };
