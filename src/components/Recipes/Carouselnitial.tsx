@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { CarouselInitialProps } from "./types";
 import IcFavoriteSVG from "../../assets/icons/ic-favorite.svg";
 import IcPortion from "../../assets/icons/ic_portion.svg";
@@ -19,34 +19,33 @@ const calificationRandom = (min: number, max: number) => {
   return Math.floor(Math.random() * (max - min) + min);
 };
 
-let i:number = 1;
 
 export const CarouselInitial: FC<CarouselInitialProps> = ({
- 
   readyInMinutes,
   servings,
   title,
   image,
+  index
 }, ) => {
 
- 
-  
+
   const foodTypeSelected = useSelector((state: any) => state.foodTypeSelected);
   const showHover = () => {
-    document.getElementById(`normal${i}`)?.setAttribute("hidden", "true");
-    document.getElementById(`hover1${i}`)?.removeAttribute("hidden");
+    document.getElementById(`normal${index}`)?.setAttribute("hidden", "true");
+    document.getElementById(`hover1${index}`)?.removeAttribute("hidden");
   };
-
+ 
+  
   /**muestra panel normal */
   const showNormal = () => {
-    document.getElementById(`normal${i}`)?.removeAttribute("hidden");
-    document.getElementById(`hover1${i}`)?.setAttribute("hidden", "true");
+    document.getElementById(`normal${index}`)?.removeAttribute("hidden");
+    document.getElementById(`hover1${index}`)?.setAttribute("hidden", "true");
   };
-  i += 1;
+
   return (
     <li className="tarjet" onMouseOver={showHover} onMouseOut={showNormal}>
       <div className="plate" style={{ backgroundImage: `url(${image})` }}></div>
-      <div id={`normal${i}`} className="normalTarjet">
+      <div id={`normal${index}`} className="normalTarjet">
         <div className="textFood">
           <span className="food">{title.substring(0, 8)}</span>
           <span className="foodDesc">&nbsp;{foodTypeSelected}</span>
@@ -57,7 +56,7 @@ export const CarouselInitial: FC<CarouselInitialProps> = ({
           <img alt="ic-favorite" className="heart" src={IcFavoriteSVG} />
         </div>
       </div>
-      <div id={`hover1${i}`} className="divhover" hidden>
+      <div id={`hover1${index}`} className="divhover" hidden>
         <div className="hoverTarjet">
           <div className="descriptionHover">
             <img alt="ic_portion" className="imgHover" src={IcPortion} />

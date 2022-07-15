@@ -10,7 +10,6 @@ import { DisplayMenuFinal } from "./DisplayMenuFinal";
 import { useSelector } from "react-redux";
 import { useQuery } from "react-query";
 import { getRecipes } from "../../services/getRecipes";
-import { useEffect, useState } from "react";
 
 const tarjets = [
   {
@@ -52,8 +51,7 @@ const tarjets = [
 ];
 
 export function Recipes() {
-
-  const [state, setState] = useState(0)  
+ 
   const foodTypeSelected = useSelector((state: any) => state.foodTypeSelected);
   const {
     data: recipes,
@@ -85,7 +83,7 @@ export function Recipes() {
           <ul id="carruselini" className="carrusel">
             {recipes.map((recipe:any, index:any) => (
               
-              <CarouselInitial key={index} {...recipe} />
+              <CarouselInitial key={index} {...recipe} index={index} />
             ))}
           </ul>
           <ul id="carruselfin" className="carrusel">
