@@ -1,12 +1,13 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialState = "dessert";
+
+const initialState: String = "dessert";
 
 export const foodTypeSelectedSlice = createSlice({
   name: "foodTypeSelected",
   initialState,
   reducers: {
-    foodTypeSelectedReducer: (state, { payload }) => payload,
+    foodTypeSelectedReducer: (state, { payload }:PayloadAction<string> ) => payload,
   },
 });
 

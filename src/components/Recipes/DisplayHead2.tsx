@@ -1,16 +1,17 @@
 import { FC } from "react";
 import { DisplayHead2Props } from "./types";
-import { useDispatch} from "react-redux";
 import { foodTypeSelectedReducer } from "../../store/Slice/foodTypeSelectedSlice";
+import { useAppDispatch } from "../../store";
+
 
 export const DisplayHead2: FC<DisplayHead2Props> = ({
   imgMenu,
   food,
   queryParams,
 }) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
-  const handleNewRecipes = (type: string | undefined) =>
+  const handleNewRecipes = (type: string) =>
     dispatch(foodTypeSelectedReducer(type));
   
   return (

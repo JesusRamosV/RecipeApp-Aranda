@@ -65,8 +65,7 @@ export function Recipes() {
 
   if (isLoading || isFetching) {
     return (
-      <div>
-        <h1>Loading...</h1>
+      <div className="spinner">
       </div>
     );
   }

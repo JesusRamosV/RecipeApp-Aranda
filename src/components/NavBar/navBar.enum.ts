@@ -1,6 +1,6 @@
 export interface ItemsNavbar {
-  name?: string;
-  queryParams?: string;
+  name: string;
+  queryParams: string;
 }
 
 export enum TypeNavbar {

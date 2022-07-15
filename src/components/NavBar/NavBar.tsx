@@ -16,7 +16,7 @@ export const NavBar = () => {
   const dispatch = useDispatch();
 
   const foodTypeSelected = useSelector((state: any) => state.foodTypeSelected);
-  const handleNewRecipes = (type: string | undefined ) => dispatch(foodTypeSelectedReducer(type));
+  const handleNewRecipes = (type: string ) => dispatch(foodTypeSelectedReducer(type));
 
 
   return (
