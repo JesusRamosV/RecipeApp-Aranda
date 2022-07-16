@@ -20,7 +20,9 @@ export const CarouselInitial: FC<CarouselInitialProps> = ({
 
 }, ) => {
 
-
+  const openInNewTab = (url: string): void => {
+    window.location.href = url;
+  }
 
   const foodTypeSelected = useSelector((state: any) => state.foodTypeSelected);
   const showHover = () => {
@@ -36,8 +38,8 @@ export const CarouselInitial: FC<CarouselInitialProps> = ({
   };
 
   return (
-    <a href={sourceUrl} className="linkToRecipe" target="_blank" rel="noreferrer">
-    <li  className="tarjet" onMouseOver={showHover} onMouseOut={showNormal}>
+    
+    <li onClick={() => openInNewTab(sourceUrl)} className="tarjet" onMouseOver={showHover} onMouseOut={showNormal}>
       <div className="plate" style={{ backgroundImage: `url(${image})` }}></div>
       <div id={`normal${index}`} className="normalTarjet">
         <div className="textFood">
@@ -72,6 +74,6 @@ export const CarouselInitial: FC<CarouselInitialProps> = ({
         </div>
       </div>
     </li>
-    </a>
+  
   );
 };
