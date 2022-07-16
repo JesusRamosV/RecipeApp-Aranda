@@ -1,7 +1,7 @@
 import { Provider } from "react-redux";
-import "./App.scss";
-import { Recipes, Footer } from "./components";
-import { NavBar } from "./components/NavBar/NavBar";
+import "./styles/App.scss";
+import { Recipes, Footer, NavBar } from "./components";
+
 import { store } from "./store/store";
 
 export const App = () => {

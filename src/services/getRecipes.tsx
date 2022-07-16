@@ -11,7 +11,6 @@ export const getRecipes = async (type: string) => {
     },
   });
   const { recipes } = data;
-  console.log(recipes);
   return recipes;
 };
 

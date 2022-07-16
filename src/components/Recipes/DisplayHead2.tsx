@@ -9,13 +9,18 @@ export const DisplayHead2: FC<DisplayHead2Props> = ({
   food,
   queryParams,
 }) => {
+
+  const item = {
+    name: food,
+    queryParams: queryParams
+  }
   const dispatch = useAppDispatch();
 
-  const handleNewRecipes = (type: string) =>
+  const handleNewRecipes = (type: any) =>
     dispatch(foodTypeSelectedReducer(type));
   
   return (
-    <div onClick={() => handleNewRecipes(queryParams)} className="tarjetMenu">
+    <div onClick={() => handleNewRecipes(item)} className="tarjetMenu">
       <img alt="Menu" className="imgMenu" src={imgMenu} />
       <span className="foodMenu">{food}</span>
     </div>
