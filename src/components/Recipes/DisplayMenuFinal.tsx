@@ -20,7 +20,7 @@ export const DisplayMenuFinal: FC<CarouselInitialProps> =({
             <div id={idnormal} className="normalTarjet" >
             <div className="textFood">
                 <span className="food">{title.substring(0, 7)}</span>
-                <span className="foodDesc">{foodTypeSelected}</span> 
+                <span className="foodDesc">{foodTypeSelected.queryParams}</span> 
             </div>
             <div className="score">
                 <img alt="start" className="star" src={IcStar} />

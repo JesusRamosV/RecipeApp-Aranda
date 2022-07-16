@@ -39,7 +39,7 @@ export const CarouselInitial: FC<CarouselInitialProps> = ({
       <div id={`normal${index}`} className="normalTarjet">
         <div className="textFood">
           <span className="food">{title.substring(0, 8)}</span>
-          <span className="foodDesc">&nbsp;{foodTypeSelected}</span>
+          <span className="foodDesc">&nbsp;{foodTypeSelected.queryParams}</span>
         </div>
         <div className="score">
           <img alt="ic_star" className="star" src={IcStar} />

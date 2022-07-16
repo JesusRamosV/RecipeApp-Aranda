@@ -54,7 +54,7 @@ export function Recipes() {
     data: recipes,
     isLoading,
     isFetching,
-  } = useQuery([foodTypeSelected], () => getRecipes(foodTypeSelected), {
+  } = useQuery([foodTypeSelected], () => getRecipes(foodTypeSelected.queryParams), {
     refetchOnWindowFocus: false,
   });
 
@@ -74,7 +74,7 @@ export function Recipes() {
         ))}
       </div>
       <div className="middle">
-        <div className="middleTitle">Nuevas Recetas</div>
+        <div className="middleTitle">{foodTypeSelected.name === 'Home'? `Nuevas Recetas` : `${foodTypeSelected.name}` }</div>
         <div className="contCarrusel">
           <ul id="carruselini" className="carrusel">
             {recipes.map((recipe:any, index:any) => (

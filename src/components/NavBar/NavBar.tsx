@@ -15,8 +15,8 @@ export let  Items: ItemsNavbar[] = [
 export const NavBar = () => {
   const dispatch = useDispatch();
 
-  const foodTypeSelected = useSelector((state: any) => state.foodTypeSelected);
-  const handleNewRecipes = (type: string ) => dispatch(foodTypeSelectedReducer(type));
+  const {queryParams} = useSelector((state: any) => state.foodTypeSelected);
+  const handleNewRecipes = (item:any) => dispatch(foodTypeSelectedReducer(item));
 
 
   return (
@@ -30,18 +30,18 @@ export const NavBar = () => {
           </div>
           <div className="menuHead">
             <ul>
-              {Items.map(({ name, queryParams }, index) => (
+              {Items.map((item , index) => (
                 <li
                   key={index}
-                  onClick={() => handleNewRecipes(queryParams)}
-                  className={foodTypeSelected === queryParams ? "selected" : ""}
+                  onClick={() => handleNewRecipes(item)}
+                  className={queryParams === item.queryParams ? "selected" : ""}
                 >
-                  {name}
+                  {item.name}
                 </li>
               ))}
             </ul>
           </div>
-          <div onClick={() => handleNewRecipes('dessert')}  className="icoHome"></div>
+          <div onClick={() => handleNewRecipes(Items[0])} className="icoHome"></div>
         </div>
 
         <div className="imgHead">
