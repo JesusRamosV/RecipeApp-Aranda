@@ -54,6 +54,7 @@ export const Recipes = () => {
     data: recipes,
     isLoading,
     isFetching,
+    error
   } = useQuery([foodTypeSelected], () => getRecipes(foodTypeSelected.queryParams), {
     refetchOnWindowFocus: false,
   });
@@ -66,6 +67,18 @@ export const Recipes = () => {
       </div>
     );
   }
+
+
+  if (error) {
+    return (
+      <div className="text">
+       <h1>Oops! Tenemos problemas con tu petición</h1>
+       <h2>Por favor vuelve a intentarlo mas tarde</h2>
+      </div>
+    );
+  }
+
+
   return (
     <>
       <div id="menuHead2" className="menuHeads">
