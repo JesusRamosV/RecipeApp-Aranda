@@ -1,0 +1,125 @@
+.middle {
+    contain: content;
+    width: 100%;
+    position: absolute;
+  }
+  
+  .middle .middleTitle {
+    color: var(--unnamed-color-d84a4a);
+    text-align: left;
+    letter-spacing: 0px;
+    color: #d84a4a;
+    opacity: 1;
+  }
+  
+  .middle .carrusel {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 5px;
+  }
+  
+  .middle .carrusel .tarjet {
+    opacity: 1;
+    position: relative;
+    box-shadow: 10px 10px 20px -5px #cccccc;
+    border-radius: 15px;
+    margin-top: 25px;
+    margin-right: 25.82px;
+    transition: height 0.2s;
+    list-style: none;
+    background: transparent linear-gradient(180deg, #e9f1fa 0%, #ffffff 100%) 0%
+      0% no-repeat padding-box;
+  }
+  
+  .middle .carrusel .tarjet .plate {
+    position: relative;
+    top: -25px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .middle .carrusel .tarjet .textFood {
+    width: 100%;
+    text-align: center;
+    margin-top: -6px;
+  }
+  
+  .middle .carrusel .tarjet .textFood .food {
+    color: var(--unnamed-color-d84a4a);
+    text-align: center;
+    letter-spacing: -0.6px;
+    color: #d84a4a;
+  }
+  
+  .middle .carrusel .tarjet .textFood .foodDesc {
+    color: var(--unnamed-color-d84a4a);
+    text-align: center;
+    letter-spacing: -0.6px;
+    color: #d84a4a;
+  }
+  
+  .middle .carrusel .tarjet .score {
+    display: flex;
+    flex-direction: row;
+    padding-left: 11.89px;
+    bottom: 12.5px;
+    position: absolute;
+    width: -webkit-fill-available;
+    align-items: center;
+  }
+  
+  .middle .carrusel .tarjet .score span {
+    color: var(--unnamed-color-425966);
+    text-align: left;
+    letter-spacing: -0.52px;
+    color: #425966;
+    opacity: 1;
+    position: absolute;
+  }
+  
+  .middle .carrusel .tarjet .score .heart {
+    position: absolute;
+    right: 19.91px;
+  }
+  
+  .middle .carrusel .tarjet .hoverTarjet {
+    flex-direction: column;
+    display: flex;
+  }
+  
+  .middle .carrusel .tarjet .hoverTarjet .descriptionHover {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .middle .carrusel .tarjet .hoverTarjet .descriptionHover img {
+    width: 17px;
+    height: 17px;
+  }
+  
+  .middle .carrusel .tarjet .hoverTarjet .descriptionHover .titTextHover {
+    color: var(--unnamed-color-d84a4a);
+    text-align: center;
+    font: normal normal normal 17px/20px Monster Clubhouse;
+    letter-spacing: 0px;
+    color: #d84a4a;
+  }
+  
+  .middle .carrusel .tarjet .hoverTarjet .descriptionHover .textHover {
+    color: var(--unnamed-color-425966);
+    text-align: center;
+    font: normal normal normal 15px/20px Poppins;
+    letter-spacing: 0px;
+    color: #425966;
+  }
+  .middle .carrusel .tarjet .divhover {
+    top: 145px;
+    position: absolute;
+    width: -webkit-fill-available;
+  }

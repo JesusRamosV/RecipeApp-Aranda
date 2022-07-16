@@ -10,7 +10,6 @@ import { calificationRandom, difficultyRandom } from "../../helpers";
 
 
 
-
 export const CarouselInitial: FC<CarouselInitialProps> = ({
   readyInMinutes,
   servings,

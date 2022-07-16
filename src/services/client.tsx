@@ -2,7 +2,7 @@ import axios from "axios";
 
 const BASE_URL = "https://api.spoonacular.com";
 
-const API_KEY = "acf92179022940839e813fb7d420f84b"
+const API_KEY = "c1dcba6528ef4d93851d199d63d3b6ab"
 
 export default axios.create({
     baseURL: BASE_URL,

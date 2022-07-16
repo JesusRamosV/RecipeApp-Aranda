@@ -1,7 +1,13 @@
-.test{
-
-    color: aqua;
+.icoHome {
+  height: 25px;
+  width: 25px;
+  background-image: url(../../assets/icons/ic_home.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  position: absolute;
 }
+
 .header .menuHead ul {
     display: flex;
     list-style: none;

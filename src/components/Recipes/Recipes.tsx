@@ -47,7 +47,7 @@ const tarjets = [
   },
 ];
 
-export function Recipes() {
+export const Recipes = () => {
  
   const foodTypeSelected = useSelector((state: any) => state.foodTypeSelected);
   const {

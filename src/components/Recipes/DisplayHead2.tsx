@@ -1,8 +1,7 @@
 import { FC } from "react";
-import { DisplayHead2Props } from "./types";
-import { foodTypeSelectedReducer } from "../../store/Slice/foodTypeSelectedSlice";
 import { useAppDispatch } from "../../store";
-
+import { foodTypeSelectedReducer } from "../../store/Slice/foodTypeSelectedSlice";
+import { DisplayHead2Props } from "./types";
 
 export const DisplayHead2: FC<DisplayHead2Props> = ({
   imgMenu,

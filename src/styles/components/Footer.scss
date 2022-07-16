@@ -1,0 +1,28 @@
+
+.footer {
+    width: 100%;
+    background: transparent linear-gradient(180deg, #c2e3f3 0%, #6aa3c1 100%) 0%
+      0% no-repeat padding-box;
+    box-shadow: 4px 6px 23px #a9a9a911;
+    opacity: 1;
+    bottom: 23px;
+    position: absolute;
+  }
+  
+  .footer .textfooter {
+    width: 381px;
+    height: 83px;
+    position: absolute;
+    color: var(--unnamed-color-425966);
+    text-align: left;
+    letter-spacing: NaNpx;
+    color: #425966;
+    opacity: 1;
+  }
+  
+  .footer .textfooter span {
+    color: var(--unnamed-color-425966);
+    text-align: left;
+    letter-spacing: 0px;
+    color: #425966;
+  }
