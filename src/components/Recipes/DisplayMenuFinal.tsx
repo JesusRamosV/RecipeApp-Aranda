@@ -17,11 +17,11 @@ export const DisplayMenuFinal: FC<DisplayMenuFinalProps> =({
 
 
     const openInNewTab = (url: string): void => {
-        window.location.href = url;
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+        if (newWindow) newWindow.opener = null
       }
 
     return(
-       // <a href={sourceUrl} className="linkToRecipe" target="_blank" rel="noreferrer">
         <li onClick={() => openInNewTab(sourceUrl)} className="tarjet">
             <div className="plate" style={{backgroundImage: `url(${image})`}}></div>
             <div id={idnormal} className="normalTarjet" >
@@ -36,7 +36,7 @@ export const DisplayMenuFinal: FC<DisplayMenuFinalProps> =({
                     </div>
             </div>
         </li>
-      //  </a>
+      
     )
     
 }

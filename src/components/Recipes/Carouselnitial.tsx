@@ -21,7 +21,8 @@ export const CarouselInitial: FC<CarouselInitialProps> = ({
 }, ) => {
 
   const openInNewTab = (url: string): void => {
-    window.location.href = url;
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+    if (newWindow) newWindow.opener = null
   }
 
   const foodTypeSelected = useSelector((state: any) => state.foodTypeSelected);
