@@ -1,5 +1,14 @@
 # Getting Started with Create React App
 
+
+###################################################
+Prueba Tecnica ARANDA
+
+Utilizando React, TypeScript, Redux Toolkit, Axios, React Query, Sass
+
+By Jesus Ramos Villamizar
+
+####################################################
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
