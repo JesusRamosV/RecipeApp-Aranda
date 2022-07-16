@@ -1,0 +1,108 @@
+.test{
+
+    color: aqua;
+}
+.header .menuHead ul {
+    display: flex;
+    list-style: none;
+    font: normal normal normal 13px/20px Poppins;
+  }
+  
+  .header .menuHead li {
+    color: var(--unnamed-color-425966);
+    text-align: left;
+    letter-spacing: 0px;
+    color: #425966;
+    opacity: 1;
+    padding: 0px 15px;
+  }
+  
+  .header .menuHead li.selected {
+    color: #d84a4a;
+  }
+  
+  .header .menuHead li:hover {
+    color: var(--unnamed-color-d84a4a);
+    text-align: left;
+    letter-spacing: 0px;
+    color: #d84a4a;
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  .headform .imgHead {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    contain: content;
+  }
+  
+  .headform .imgHead .floatText {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+  
+  .headform .imgHead .floatText .text1 {
+    text-align: left;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+    height: 79px;
+  }
+  
+  .headform .imgHead .floatText .text2 {
+    text-align: left;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+  }
+  .header .menuHead {
+    position: absolute;
+    right: 65px;
+  }
+
+  .header {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 69px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #8395a7;
+    opacity: 1;
+    display: flex;
+    contain: content;
+  }
+  
+  .header .title {
+    top: 14px;
+    left: 70px;
+    width: 180px;
+    height: 54px;
+    position: absolute;
+  }
+  
+  .header .title span {
+    text-transform: capitalize;
+    opacity: 1;
+  }
+  
+  .header .title .text1 {
+    color: var(--unnamed-color-425966);
+    text-align: left;
+    font: normal normal normal 40px/54px Monster Clubhouse;
+    letter-spacing: 1.15px;
+    color: #425966;
+  }
+  
+  .header .title .text2 {
+    color: var(--unnamed-color-d84a4a);
+    text-align: left;
+    font: normal normal normal 30px/46px Poppins;
+    letter-spacing: 0.86px;
+    color: #d84a4a;
+    opacity: 1;
+  }
+  

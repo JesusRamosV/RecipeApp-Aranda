@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { foodTypeSelectedReducer } from "../../store/Slice/foodTypeSelectedSlice";
 import { ItemsNavbar } from "./navBar.enum";
+// import "./Navbar.scss";
 
 export let  Items: ItemsNavbar[] = [
   { name: "Home", queryParams: "dessert" },
@@ -21,7 +22,7 @@ export const NavBar = () => {
 
   return (
     <>
-      <div className="headform">
+      <div className="icoHome">
         <div className="header">
           <div className="title">
             <span className="text1">
@@ -29,6 +30,7 @@ export const NavBar = () => {
             </span>
           </div>
           <div className="menuHead">
+          <div className="test"> hola</div>
             <ul>
               {Items.map((item , index) => (
                 <li
