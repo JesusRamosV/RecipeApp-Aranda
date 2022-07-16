@@ -17,4 +17,5 @@ export type DisplayMenuFinalProps = {
   idnormal: string;
   title: string;
   image: string;
+  sourceUrl: string;
 }

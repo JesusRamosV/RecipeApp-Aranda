@@ -8,13 +8,14 @@ import { calificationRandom } from "../../helpers";
 
 export const DisplayMenuFinal: FC<DisplayMenuFinalProps> =({
     idnormal,
-  title,
-  image
+    title,
+    image,
+    sourceUrl
 
 }) => {
     const foodTypeSelected = useSelector((state: any) => state.foodTypeSelected);
     return(
-        
+        <a href={sourceUrl} className="linkToRecipe" target="_blank" rel="noreferrer">
         <li className="tarjet">
             <div className="plate" style={{backgroundImage: `url(${image})`}}></div>
             <div id={idnormal} className="normalTarjet" >
@@ -29,7 +30,7 @@ export const DisplayMenuFinal: FC<DisplayMenuFinalProps> =({
                     </div>
             </div>
         </li>
-
+        </a>
     )
     
 }
