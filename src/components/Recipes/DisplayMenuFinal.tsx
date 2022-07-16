@@ -16,14 +16,10 @@ export const DisplayMenuFinal: FC<DisplayMenuFinalProps> =({
     const foodTypeSelected = useSelector((state: any) => state.foodTypeSelected);
 
 
-    const openInNewTab = (url: string): void => {
-        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-        if (newWindow) newWindow.opener = null
-      }
 
     return(
-       // <a href={sourceUrl} className="linkToRecipe" target="_blank" rel="noreferrer">
-        <li onClick={() => openInNewTab('https://stackoverflow.com')} className="tarjet">
+       <a href={sourceUrl} className="linkToRecipe" target="_blank" rel="noreferrer">
+        <li className="tarjet">
             <div className="plate" style={{backgroundImage: `url(${image})`}}></div>
             <div id={idnormal} className="normalTarjet" >
             <div className="textFood">
@@ -37,7 +33,7 @@ export const DisplayMenuFinal: FC<DisplayMenuFinalProps> =({
                     </div>
             </div>
         </li>
-      //  </a>
+       </a>
     )
     
 }
