@@ -59,6 +59,7 @@ export const Recipes = () => {
     refetchOnWindowFocus: false,
   });
 
+console.log(recipes);
 
 
   if (isLoading || isFetching) {

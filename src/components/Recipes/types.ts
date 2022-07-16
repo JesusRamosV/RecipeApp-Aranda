@@ -3,6 +3,7 @@ export type CarouselInitialProps = {
   servings: number;
   title: string;
   image: string;
+  sourceUrl: string;
   index: number;
 };
 
